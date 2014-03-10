@@ -11,7 +11,7 @@
 // - http://www.adequatelygood.com/2010/3/JavaScript-Module-Pattern-In-Depth
 (function ($, window, document, undefined) {
 
-  // // Grid toggle
+  // Grid toggle
   // $(function() {
 
   //   $("#gridtoggle").click(function(e) {

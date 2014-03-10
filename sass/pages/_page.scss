@@ -3,26 +3,10 @@
 //
 
 
-// Skip link
-#skip-link {
-  margin: 0;
-
-  a,
-  a:visited {
-    background-color: #666;
-    color: $white;
-    display: block;
-    padding: 2px 0 3px 0;
-    text-align: center;
-    width: 100%;
-  }
-}
-
-
 // HTML
 html {
 	background: $white;
-  color: $gray-100;
+  color: $black;
   font-family: $font-body;
 }
 
@@ -53,55 +37,80 @@ body {
 
 // Header
 #header {
+  margin-bottom: em(20px);
+  padding-top: em(20px);
+  
+  @extend %wrapper;
 }
 
 
 // Logo wrapper
 #header-logo {
+  margin-bottom: em(20px);
 }
 
 
 // Logo
-#logo {
+#logo {  
+  img {
+    display: block;
+  }
 }
 
 
 // Navigation
 #navigation {
+  @extend %region;
 }
 
 
-// Region - Navigation
-.region-navigation {
-}
+// Preface
+#preface {
+  margin-bottom: em(20px);
 
-
-// Region - Highlighted
-.region-highlighted {
+  @extend %region;
+  @extend %wrapper;
 }
 
 
 // Main
 #main {
+  margin-bottom: em(20px);
+
   @extend %clearfix;
+  @extend %wrapper;
 }
 
 
 // Content
 #content {
+  @extend %region;
 }
 
 
 // Sidebar first
-.region-sidebar-first {
+#sidebar-first {
+  @extend %region;
 }
 
 
 // Sidebar second
-.region-sidebar-second {
+#sidebar-second {
+  @extend %region;
+}
+
+
+// Postscript
+#postscript {
+  margin-bottom: em(20px);
+
+  @extend %region;
+  @extend %wrapper;
 }
 
 
 // Footer
 footer {
+  @extend %region;
+  @extend %wrapper;
 }

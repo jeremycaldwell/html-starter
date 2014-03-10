@@ -2,3 +2,30 @@
 // Helpers
 //
 
+
+// Element - Invisible
+.element-invisible {
+  @include element-invisible
+}
+
+
+// Element - Focusable
+.element-focusable {
+  @include element-focusable
+}
+
+
+// Skip link
+#skip-link {
+  margin: 0;
+
+  a,
+  a:visited {
+    background-color: #666;
+    color: $white;
+    display: block;
+    padding: 2px 0 3px 0;
+    text-align: center;
+    width: 100%;
+  }
+}
