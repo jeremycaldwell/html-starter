@@ -1,0 +1,46 @@
+//
+// Breakpoint
+//
+
+
+$breakpoint-to-ems: 			true;
+
+
+// Hi DPI
+$bp-hidpi: 								min-resolution 1.5dppx;
+
+
+// Small
+$bp-small: 								420px;
+$bp-xsmall: 							550px;
+$bp-xxsmall: 							720px;
+
+
+// Medium
+$bp-medium: 							880px;
+$bp-xmedium: 							920px;
+$bp-xxmedium: 						980px;
+
+
+// Large
+$bp-large: 								1000px;
+$bp-xlarge: 							1250px;
+$bp-xxlarge: 							1550px;
+$bp-xxxlarge: 						1875px;
+
+
+// Fence
+$fence-small_xsmall: 			$bp-small 419px;
+$fence-small_medium: 			$bp-small 879px;
+$fence-xxsmall_large:  		$bp-xxsmall 999px;
+$fence-xxsmall_xlarge:  	$bp-xxsmall 1249px;
+$fence-xxsmall_xxlarge:  	$bp-xxsmall 1549px;
+
+$fence-medium_xmedium: 		$bp-medium 879px;
+$fence-medium_large: 			$bp-medium 999px;
+$fence-medium_xlarge: 		$bp-medium 1249px;
+$fence-medium_xxlarge: 		$bp-medium 1549px;
+
+$fence-large_xlarge: 			$bp-large 1249px;
+$fence-large_xxlarge: 		$bp-large 1549px;
+$fence-xlarge_xxlarge: 		$bp-xlarge 1549px;

@@ -1,0 +1,27 @@
+//
+// Forms
+//
+
+
+// Form item
+.form-item {
+  margin: 0 0 em(10px) 0;
+}
+
+
+// Form text
+.form-text,
+.form-textarea {
+  background: $gray-247;
+  border: none;
+  max-width: 100%;
+  outline: none;
+  padding: em(15px);
+  width: 100%;
+
+  // Transitions
+  transition: all 0.2s ease-in 0s;
+
+  &:focus {
+  }
+}

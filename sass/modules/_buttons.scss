@@ -1,0 +1,37 @@
+//
+// Buttons
+//
+
+
+// Default button style
+a.button:link,
+a.button:visited,
+.form-submit {
+	@extend %button;
+
+	&:hover,
+	&:focus,
+	&:active {
+	}
+}
+
+
+// Submit
+.form-submit {
+	margin-right: em(10px);
+}
+
+
+// Button - Primary
+.button-primary {
+	@extend %button;
+	@extend %button-primary;
+}
+
+
+// Button - Secondary
+.button-secondary {
+	@extend %button;
+	@extend %button-secondary;
+}
+

@@ -1,0 +1,34 @@
+// Initialize the Sass variables and partials used in this project.
+ 
+// Set the legacy IE support variables. We override the default values set by
+// the compass/support partial, but let styles-ie8.scss override these values.
+$legacy-support-for-ie6 : false !default;
+$legacy-support-for-ie7 : false !default; // Note the use of !default.
+$legacy-support-for-ie8 : false !default;
+ 
+
+// Partials to be shared with all .scss files.
+ 
+// Add Compass' IE and vendor prefix support variables.
+// Docs at http://compass-style.org/reference/compass/support
+@import "compass/support";
+
+
+// Add the Breakpoint mixin for media query support.
+// Docs at http://breakpoint-sass.com
+@import "breakpoint";
+
+
+// Singularity Grid System
+// Docs at http://singularity.gs
+@import "singularitygs";
+
+
+// Toolkit
+// https://github.com/Team-Sass/toolkit
+@import "toolkit";
+
+
+// rgbapng
+// Docs at https://github.com/aaronrussell/compass-rgbapng
+@import "rgbapng";

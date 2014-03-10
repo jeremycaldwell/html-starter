@@ -1,0 +1,67 @@
+//
+// Layout
+//
+
+
+// Sidebar first
+.sidebar-first {
+
+	// Content
+  #content {
+	  @include breakpoint($bp-large, $no-query: true) {   
+	    @include grid-span(9, 4);
+	  }
+  }
+
+	// Sidebar first
+  .region-sidebar-first {
+	  @include breakpoint($bp-large, $no-query: true) {   
+	    @include grid-span(3, 1);
+	  }
+  }
+}
+
+
+// Sidebar second
+.sidebar-second {
+
+	// Content
+  #content {
+	  @include breakpoint($bp-large, $no-query: true) {   
+	    @include grid-span(9, 1);
+	  }
+  }
+
+	// Sidebar second
+  .region-sidebar-second {
+	  @include breakpoint($bp-large, $no-query: true) {   
+	    @include grid-span(3, 10);
+	  }
+  }
+}
+
+
+// Two sidebars
+.two-sidebars {
+
+	// Content
+  #content {
+	  @include breakpoint($bp-large, $no-query: true) {   
+	    @include grid-span(6, 4);
+	  }
+  }
+
+  // Sidebar first
+  .region-sidebar-first {
+	  @include breakpoint($bp-large, $no-query: true) {   
+	    @include grid-span(3, 1);
+	  }
+  }
+
+  // Sidebar second
+  .region-sidebar-second {
+	  @include breakpoint($bp-large, $no-query: true) {   
+	    @include grid-span(3, 10);
+	  }
+  }
+}

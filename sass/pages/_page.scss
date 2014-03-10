@@ -1,0 +1,107 @@
+//
+// Page
+//
+
+
+// Skip link
+#skip-link {
+  margin: 0;
+
+  a,
+  a:visited {
+    background-color: #666;
+    color: $white;
+    display: block;
+    padding: 2px 0 3px 0;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+
+// HTML
+html {
+	background: $white;
+  color: $gray-100;
+  font-family: $font-body;
+}
+
+
+// Body
+body {
+}
+
+
+// HTML + Body
+html, 
+body {
+	margin: 0;
+	padding: 0;
+}
+
+
+// Page
+#page {
+}
+
+
+// Inner
+.inner {
+  @extend %wrapper;
+}
+
+
+// Header
+#header {
+}
+
+
+// Logo wrapper
+#header-logo {
+}
+
+
+// Logo
+#logo {
+}
+
+
+// Navigation
+#navigation {
+}
+
+
+// Region - Navigation
+.region-navigation {
+}
+
+
+// Region - Highlighted
+.region-highlighted {
+}
+
+
+// Main
+#main {
+  @extend %clearfix;
+}
+
+
+// Content
+#content {
+}
+
+
+// Sidebar first
+.region-sidebar-first {
+}
+
+
+// Sidebar second
+.region-sidebar-second {
+}
+
+
+// Footer
+footer {
+}

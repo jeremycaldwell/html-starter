@@ -1,0 +1,12 @@
+//
+// Icons
+//
+
+.icon {
+	display: block;
+}
+
+// Image replacement
+.ir {
+  @extend %imgrep;
+}
