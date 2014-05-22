@@ -33,3 +33,14 @@
 	height: 40px;
 	width: 100%;
 }
+
+
+// Icon - Success
+.icon-success {
+	@include svg-bg('message-success', 'other');
+
+	background-position: 50% 50%;
+	display: block;
+	height: 40px;
+	width: 100%;
+}
