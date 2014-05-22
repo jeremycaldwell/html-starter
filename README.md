@@ -12,7 +12,7 @@ brew install ImageMagick
 grunt watch
 ```
 
-#### Concatinate JS
+#### Concatenate JS
 ```
 grunt concat
 ```
