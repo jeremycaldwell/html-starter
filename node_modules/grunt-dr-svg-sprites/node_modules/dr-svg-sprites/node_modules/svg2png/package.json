@@ -1,0 +1,40 @@
+{
+  "name": "svg2png",
+  "description": "A SVG to PNG converter, using PhantomJS.",
+  "version": "1.0.1",
+  "author": {
+    "name": "Domenic Denicola",
+    "email": "domenic@domenicdenicola.com",
+    "url": "http://domenic.me"
+  },
+  "license": "WTFPL",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/domenic/svg2png.git"
+  },
+  "bugs": {
+    "url": "http://github.com/domenic/svg2png/issues"
+  },
+  "main": "lib/svg2png.js",
+  "scripts": {
+    "test": "mocha",
+    "lint": "jshint lib && jshint test"
+  },
+  "dependencies": {
+    "phantomjs": "^1.9.7-1"
+  },
+  "devDependencies": {
+    "chai": "~1.9.0",
+    "jshint": "~2.4.3",
+    "mocha": "~1.17.1"
+  },
+  "readme": "# SVG-to-PNG Converter Using PhantomJS\n\nYou have a SVG file. For whatever reason, you need a PNG. **svg2png** can help.\n\n```js\nsvg2png(\"source.svg\", \"dest.png\", function (err) {\n    // PNGs for everyone!\n});\n```\n\nMaybe you need to scale the image while converting? We can do that too:\n\n```js\nsvg2png(\"source.svg\", \"dest.png\", 1.2, function (err) {\n    // 1.2×-sized PNGs for everyone!\n});\n```\n\nThe scale factor is relative to the SVG's `viewbox` or `width`/`height` attributes, for the record.\n\nsvg2png is built on the latest in [PhantomJS][] technology to render your SVGs using a headless WebKit instance. I have\nfound this to produce much more accurate renderings than other solutions like GraphicsMagick or Inkscape. Plus, it's\neasy to install cross-platform due to the excellent [phantomjs][package] npm package—you don't even need to have\nPhantomJS in your `PATH`.\n\n[PhantomJS]: http://phantomjs.org/\n[package]: https://npmjs.org/package/phantomjs\n\n## CLI\n\n[@skyzyx][] made [a CLI version][] of this; you should go check it out if you're into using the command line.\n\n[@skyzyx]: https://github.com/skyzyx\n[a CLI version]: https://github.com/skyzyx/svg2png-cli\n",
+  "readmeFilename": "README.md",
+  "homepage": "https://github.com/domenic/svg2png",
+  "_id": "svg2png@1.0.1",
+  "dist": {
+    "shasum": "01e264d1b4141fd2c63786284a6b291a675f10c4"
+  },
+  "_resolved": "git://github.com/rasmusfl0e/svg2png.git#9a0a01d37a38cd4ad461f4ae32f598d402f7692e",
+  "_from": "svg2png@git://github.com/rasmusfl0e/svg2png.git"
+}

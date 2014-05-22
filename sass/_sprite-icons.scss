@@ -1,0 +1,46 @@
+  $email-x: 0px;
+  $email-y: 0px;
+  $email-offset-x: 0px;
+  $email-offset-y: 0px;
+  $email-width: 60px;
+  $email-height: 20px;
+  $email-total-width: 60px;
+  $email-total-height: 70px;
+  $email-image: '../images/sprite-icons.png';
+  $email: 0px 0px 0px 0px 60px 20px 60px 70px '../images/sprite-icons.png';
+  $user-x: 0px;
+  $user-y: 20px;
+  $user-offset-x: 0px;
+  $user-offset-y: -20px;
+  $user-width: 50px;
+  $user-height: 50px;
+  $user-total-width: 60px;
+  $user-total-height: 70px;
+  $user-image: '../images/sprite-icons.png';
+  $user: 0px 20px 0px -20px 50px 50px 60px 70px '../images/sprite-icons.png';
+
+  @mixin sprite-width($sprite) {
+    width: nth($sprite, 5);
+  }
+
+  @mixin sprite-height($sprite) {
+    height: nth($sprite, 6);
+  }
+
+  @mixin sprite-position($sprite) {
+    $sprite-offset-x: nth($sprite, 3);
+    $sprite-offset-y: nth($sprite, 4);
+    background-position: $sprite-offset-x  $sprite-offset-y;
+  }
+
+  @mixin sprite-image($sprite) {
+    $sprite-image: nth($sprite, 9);
+    background-image: url(#{$sprite-image});
+  }
+
+  @mixin sprite($sprite) {
+    @include sprite-image($sprite);
+    @include sprite-position($sprite);
+    @include sprite-width($sprite);
+    @include sprite-height($sprite);
+  }
