@@ -1,5 +1,3 @@
-Common commands for this project.
-
 ### Requirements
 
 ```
@@ -52,9 +50,9 @@ grunt compass
 ### PNG Sprites
 
 ``` scss
-// Yoke's banner
-.yokes-banner {
-  @include sprite($yokes-banner);  
+// Icon - Email
+.icon-email {
+  @include sprite($email);  
 }
 ```
 
