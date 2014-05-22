@@ -3,7 +3,7 @@ module.exports = function(grunt) {
     // Theme path
     $themepath = '';
 
-    // 1. All configuration goes here 
+    // 1. Configuration
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
@@ -11,6 +11,7 @@ module.exports = function(grunt) {
         concat: {   
             dist: {
                 src: [
+                    'js/modernizr.custom.92469.js',     // Modernizr
                     'js/script.js'                      // Script
                 ],
                 dest: 'js/build/production.js',
@@ -26,16 +27,16 @@ module.exports = function(grunt) {
         },
 
         // Image optimization
-        // imageoptim: {
-        //   myTask: {
-        //     options: {
-        //       jpegMini: false,
-        //       imageAlpha: true,
-        //       quitAfter: true
-        //     },
-        //     src: ['images']
-        //   }
-        // },
+        imageoptim: {
+          myTask: {
+            options: {
+              jpegMini: false,
+              imageAlpha: true,
+              quitAfter: true
+            },
+            src: ['images']
+          }
+        },
 
         // Compass & SASS
         compass: {
@@ -68,6 +69,58 @@ module.exports = function(grunt) {
             },
         },
 
+        // Minimize SVGs
+        svgmin: {
+            options: {
+                plugins: [
+                    { removeViewBox: false },
+                    { removeUselessStrokeAndFill: false }
+                ]
+            },
+            all: {                                        // Target
+                files: [{                                 // Dictionary of files
+                    expand: true,                         // Enable dynamic expansion.
+                    cwd: 'images/',                       // Src matches are relative to this path.
+                    src: ['**/*.svg'],                    // Actual pattern(s) to match.
+                    dest: 'images/',                      // Destination path prefix.
+                    ext: '.svg'                           // Dest filepaths will have this extension.
+                }]
+            }
+        },
+
+        // SVG Sprites
+        "svg-sprites": {
+            "icons": {
+                options: {
+                    spriteElementPath: "images/icons/svg",
+                    spritePath: "images",
+                    cssPath: "sass",
+                    cssSuffix: "scss",
+                    cssPrefix: "_sprite",
+                    cssPngPrefix: ".no-svg",
+                    prefix: "icon",
+                    unit: 20
+                }
+            }
+        },
+
+        // PNG Sprites
+        sprite:{
+
+            icons: {
+                src: 'images/icons/*.png',
+                destImg: 'images/sprite-icons.png',
+                destCSS: 'sass/_sprite-icons.scss',
+                // 'padding': 20,
+            },
+
+            // navigation: {
+            //     src: 'images/nav/*.png',
+            //     destImg: 'images/sprite-nav.png',
+            //     destCSS: 'sass/_sprite-nav.scss',
+            //     'padding': 20,
+            // },
+        },
 
         // Watch
         watch: {
@@ -96,32 +149,45 @@ module.exports = function(grunt) {
                     spawn: false,
                 },
             },
-
-            // Images
-            // images: {
-            //     files: ['**/*.{png,jpg}'],
-            //     tasks: ['imageoptim'],
-            //     options: {
-            //         spawn: false,
-            //     },
-            // },
         }
 
     });
 
-    // 3. Where we tell Grunt we plan to use this plug-in.
-    grunt.loadNpmTasks('grunt-contrib-concat');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
+    // 1. Plugins
+    
+    // Watch
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-compass');
-    // grunt.loadNpmTasks('grunt-imageoptim');
 
-    // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
+    // JS - Concatinate
+    grunt.loadNpmTasks('grunt-contrib-concat');
+
+    // JS - Uglify
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+
+    // SASS
+    grunt.loadNpmTasks('grunt-contrib-compass');
+
+    // SVG min
+    grunt.loadNpmTasks('grunt-svgmin');
+
+    // SVG sprites
+    grunt.loadNpmTasks('grunt-dr-svg-sprites');
+
+    // PNG sprites
+    grunt.loadNpmTasks('grunt-spritesmith');
+
+    // Image compression
+    grunt.loadNpmTasks('grunt-imageoptim');
+
+    // 3. Grunt tasks
     grunt.registerTask('default', [
-        'compass', 
         'concat', 
         'uglify', 
-        // 'imageoptim',
+        'compass', 
+        'svgmin', 
+        'svg-sprites', 
+        'sprite', 
+        'imageoptim', 
     ]);
 
 };

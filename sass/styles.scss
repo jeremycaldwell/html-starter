@@ -16,16 +16,18 @@
 @import "base/_extends.scss";
 @import "base/_mixins.scss";
 
-// Sprites / Normalize
-@import "base/_sprites.scss";
+// Normalize
 @import "base/_normalize.scss";
+
+// Sprites
+@import "_sprite-icons.scss";
+@import "_sprite-icons-sprite.scss";
 
 // Styling
 @import "layouts/*";															// Import layouts
 @import "modules/*";															// Import modules
 @import "nodes/*";																// Import nodes
 @import "pages/*";																// Import pages
-
 
 // Print
 @import "print/*";	

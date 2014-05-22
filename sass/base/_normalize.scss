@@ -191,9 +191,14 @@ dfn {
  */
 
 hr {
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-    height: 0;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  height: 0;
+  margin-bottom: em(20px);
+  margin-top: em(20px);
+    
+  @extend %horizontalrule;
 }
 
 /**

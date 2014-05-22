@@ -35,3 +35,19 @@
     @include element-invisible-off;
   }
 }
+
+
+// SVG background
+$image-path: '../images' !default;
+$fallback-extension: 'png' !default;
+$retina-suffix: '@2x';
+
+@mixin svg-bg($name, $dir) {
+  background-image: url(#{$image-path}/#{$dir}/svg/#{$name}.svg);
+  background-repeat: no-repeat;
+
+  // No SVG support
+  .no-svg & {
+    background-image: url(#{$image-path}/#{$dir}/#{$name}.#{$fallback-extension});
+  }
+}

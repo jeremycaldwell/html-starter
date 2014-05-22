@@ -10,3 +10,26 @@
 .ir {
   @extend %imgrep;
 }
+
+
+// Icon - Email
+.icon-email {
+  @include sprite($email);  
+}
+
+
+// Icon - User
+.icon-user {
+  @include sprite($user);  
+}
+
+
+// Icon - Caret
+.icon-caret {
+	@include svg-bg('carat-down_brown', 'other');
+
+	background-position: 50% 50%;
+	display: block;
+	height: 40px;
+	width: 100%;
+}
