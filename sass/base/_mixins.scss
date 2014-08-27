@@ -51,3 +51,10 @@ $retina-suffix: '@2x';
     background-image: url(#{$image-path}/#{$dir}/#{$name}.#{$fallback-extension});
   }
 }
+
+
+// Font size - Rem and PX fallback
+@mixin font-size($org) {
+  font-size: $org + px;
+  font-size: ($org/16) + rem;
+}

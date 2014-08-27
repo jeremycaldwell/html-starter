@@ -12,8 +12,9 @@
 // Block title
 h2.block-title {
   color: $gray-50;
-	font-size: em(24px);
 	margin-bottom: em(15px);
+
+  @include font-size(24);
 
   @include breakpoint($bp-xlarge, $no-query: true) {
   	color: $gray-100;

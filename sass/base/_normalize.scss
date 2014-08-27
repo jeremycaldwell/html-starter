@@ -121,40 +121,46 @@ a:hover {
  */
 
 h1 {
-  font-size: em(56px);
   line-height: 100%;
   margin: 0 0 em(7px) 0;
+
+  @include font-size(56);
 }
 
 h1#page-title {
-  font-size: em(30px);
+  @include font-size(56);   
 }
 
 h2 {
-  font-size: em(20px);
   line-height: 100%;
   margin: 0 0 em(10px) 0;
+
+  @include font-size(20);   
 }
 
 h3 {
-  font-size: em(18px);
   font-weight: 700;
   margin: 0 0 em(3px) 0;
+
+  @include font-size(18);
 }
 
 h4 {
-  font-size: em(16px);
   margin: 0 0 em(10px) 0;
+
+  @include font-size(16);
 }
 
 h5 {
-  font-size: em(16px);
   margin: 0 0 em(10px) 0;
+
+  @include font-size(16);
 }
 
 h6 {
-  font-size: em(16px);
   margin: 0 0 em(10px) 0;
+
+  @include font-size(16);
 }
 
 p {
@@ -471,9 +477,10 @@ table {
    ========================================================================== */
 
 blockquote {
-  font-size: em(28px);
   line-height: 100%;
   margin: 0 0 10px 15px;
+
+  @include font-size(28);
 }
 
 
