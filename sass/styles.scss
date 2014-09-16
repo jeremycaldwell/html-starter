@@ -19,15 +19,17 @@
 // Normalize
 @import "base/_normalize.scss";
 
+
 // Sprites
 @import "_sprite-icons.scss";
 @import "_sprite-icons-sprite.scss";
 
+
 // Styling
-@import "layouts/*";															// Import layouts
-@import "modules/*";															// Import modules
-@import "nodes/*";																// Import nodes
-@import "pages/*";																// Import pages
+@import "layout/*";																	// Import layouts
+@import "components/*";															// Import components
+@import "theme/*";																	// Import theme
+
 
 // Print
 @import "print/*";	
