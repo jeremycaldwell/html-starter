@@ -3,6 +3,14 @@
 //
 
 
+// HTML + Body
+html, 
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
 // HTML
 html {
 	background: $white;
@@ -13,14 +21,6 @@ html {
 
 // Body
 body {
-}
-
-
-// HTML + Body
-html, 
-body {
-	margin: 0;
-	padding: 0;
 }
 
 
@@ -37,10 +37,10 @@ body {
 
 // Header
 #header {
+  @extend %wrapper;
+
   margin-bottom: em(20px);
   padding-top: em(20px);
-  
-  @extend %wrapper;
 }
 
 
@@ -51,7 +51,9 @@ body {
 
 
 // Logo
-#logo {  
+#logo {
+
+  // Image
   img {
     display: block;
   }
@@ -66,19 +68,20 @@ body {
 
 // Preface
 #preface {
-  margin-bottom: em(20px);
-
   @extend %region;
   @extend %wrapper;
+
+  margin-bottom: em(20px);
 }
 
 
 // Main
 #main {
-  margin-bottom: em(20px);
-
-  @extend %clearfix;
   @extend %wrapper;
+
+  @include clearfix;
+
+  margin-bottom: em(20px);
 }
 
 
@@ -102,10 +105,10 @@ body {
 
 // Postscript
 #postscript {
-  margin-bottom: em(20px);
-
   @extend %region;
   @extend %wrapper;
+
+  margin-bottom: em(20px);
 }
 
 

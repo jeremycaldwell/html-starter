@@ -21,47 +21,48 @@ module.exports = function (config, callback) {
 	var buildPNG = require("./lib/build-png");
 	var buildPreview = require("./lib/build-preview");
 
-	var glob = config.spriteElementPath + path.sep + "*.svg";
-	var sprite = new Sprite(config)
+	var sprite = new Sprite(config);
 
-	vfs.src(glob).pipe(build(sprite));
+	vfs.src(sprite.config.spriteElementPath).pipe(build(sprite));
 
 	function build (sprite) {
 
 		return through.obj(function (file, encoding, callback) {
-			svgutil.parse(file.contents.toString(), function (err, data) {
-				sprite.addItem(file.path, data.source, data.width, data.height);
+			svgutil.parse(file.contents.toString(), sprite.config.svgo, function (err, data) {
+				sprite.addItem(file.path, data.source, data.namespaces, data.width, data.height);
 				callback(null);
 			});
 		}, function () {
 
 			sprite.prepare();
 
-			var tasks = [
-				function (callback) {
-					buildSVG(sprite, function () {
-						buildPNG(sprite, callback);
+			var tasks = {};
+
+			tasks.images = function (callback) {
+				buildSVG(sprite, function (err, file) {
+					buildPNG(sprite, function (err, files) {
+						callback(null, [file].concat(files));
 					});
-				}
-			];
+				});
+			};
 			
 			if (sprite.cssPath) {
-				tasks.push(function (callback) {
+				tasks.css = function (callback) {
 					buildCSS(sprite, callback);
-				});
+				};
 			}
 			
 			if (sprite.previewPath) {
-				tasks.push(function (callback) {
+				tasks.preview = function (callback) {
 					buildPreview(sprite, callback);
-				});
+				};
 			}
 
 			async.parallel(
 				tasks,
-				function () {
+				function (err, result) {
 					if (typeof callback == "function") {
-						callback(null);
+						callback(null, result);
 					}
 				}
 			);

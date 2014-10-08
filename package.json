@@ -1,5 +1,5 @@
 {
-  "name": "zen-subtheme",
+  "name": "html-starter",
   "version": "0.1.0",
   "devDependencies": {
     "grunt": "~0.4.1",
@@ -10,6 +10,7 @@
     "grunt-contrib-compass": "~0.7.1",
     "grunt-imageoptim": "~1.4.1",
     "grunt-svgmin": "~0.4.0",
-    "grunt-dr-svg-sprites": "~0.9.4"
+    "grunt-dr-svg-sprites": "~0.9.4",
+    "grunt-spritesmith": "~2.20.0"
   }
 }

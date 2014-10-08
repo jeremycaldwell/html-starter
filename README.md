@@ -5,6 +5,13 @@ brew install GraphicsMagick
 brew install ImageMagick
 ```
 
+### Quickstart
+
+```
+bundle install
+npm install
+```
+
 ### Grunt commands
 
 #### Watch
@@ -65,4 +72,12 @@ grunt compass
 Example:
 ``` scss
 @include svg-bg('carat-down_brown', 'other');
+```
+
+### Sass
+
+Font size
+
+``` scss
+@include font-size(24);
 ```

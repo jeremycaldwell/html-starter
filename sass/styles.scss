@@ -1,5 +1,33 @@
 // Base
-@import "base/_init.scss";
+
+// Add Compass' IE and vendor prefix support variables.
+// SOURCE: http://compass-style.org/reference/compass/support
+@import "compass/support";
+
+// Breakpoint
+// Really Simple Media Queries with Sass
+// SOURCE: https://github.com/at-import/breakpoint/
+@import "breakpoint";
+
+// Singularity
+// Grids Without Limits
+// SOURCE: https://github.com/at-import/Singularity
+@import "singularitygs";
+
+// Toolkit 
+// Progressive Enhancement? Simple. Responsive Web Design? Done. Design in Browser? Beautiful.
+// SOURCE: https://github.com/at-import/toolkit
+@import "toolkit";
+@import "toolkit/kickstart";
+
+// rgbapng
+// Cross-browser compatible RGBA support
+// SOURCE: https://github.com/aaronrussell/compass-rgbapng
+@import "rgbapng";
+
+
+//========================================//
+
 
 // Variables
 @import "base/_breakpoint.scss";
@@ -19,17 +47,14 @@
 // Normalize
 @import "base/_normalize.scss";
 
-
 // Sprites
 @import "_sprite-icons.scss";
 @import "_sprite-icons-sprite.scss";
-
 
 // Styling
 @import "layout/*";																	// Import layouts
 @import "components/*";															// Import components
 @import "theme/*";																	// Import theme
-
 
 // Print
 @import "print/*";	

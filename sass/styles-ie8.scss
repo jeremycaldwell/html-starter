@@ -1,14 +1,13 @@
 // Styles for IE 8 and lower.
- 
-// Set the legacy IE support variables. These override the !default values set
-// in _init.scss.
-$legacy-support-for-ie6 : false;
-$legacy-support-for-ie7 : false;
-$legacy-support-for-ie8 : true;
+
+
+// Compass declaration adding support for IE8
+$browser-minimum-versions: (
+  'ie': "8"
+);
  
 // Force the breakpoint mixin to discard all media queries except ones with
-// $no-query set to true. Since we use the default values in styles.scss,
-// we don't need to set these in _init.scss.
+// $no-query set to true.
 $breakpoint-no-queries : true;
 $breakpoint-no-query-fallbacks : true;
  

@@ -11,7 +11,7 @@ module.exports = function(grunt) {
         concat: {   
             dist: {
                 src: [
-                    'js/modernizr.custom.92469.js',     // Modernizr
+                    'js/modernizr.custom.14715.js',     // Modernizr
                     'js/script.js'                      // Script
                 ],
                 dest: 'js/build/production.js',

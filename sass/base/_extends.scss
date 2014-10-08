@@ -29,7 +29,8 @@
   background-color: transparent;
   border: 0;
   overflow: hidden;
-  /* IE 6/7 fallback */
+
+  // IE 6/7 fallback
   *text-indent: -9999px;
 
   &:before {
@@ -73,11 +74,12 @@
   text-align: center;
   text-decoration: none;
   
-  @include box-shadow(
-    0 1px 0 rgba($white, 0.5) inset
-  );
 
-  @include transition(background-color, .3s, ease-out 0s);
+
+
+// box-shadow(0 1px 0 rgba($white, 0.5) inset);
+// @include transition(background, .3s, ease-out 0s);
+
 
   &:hover,
   &:focus,
@@ -110,5 +112,6 @@
 // Horizontal rule
 %horizontalrule {
   border-bottom: 1px solid #ccc;
-  @include box-shadow(0px 1px 0px 0px rgba($white, .75));
+
+  // @include box-shadow(0px 1px 0px 0px rgba($white, .75));
 }

@@ -2,12 +2,21 @@ var fs = require("fs");
 var path = require("path");
 var SVGO = require("svgo");
 
-var svgo = new SVGO();
 
-function parse (content, callback) {
+function parse (content, config, callback) {
+	var svgo = new SVGO(config);
 	svgo.optimize(content, function (result) {
+		var namespaces = {};
+		var matches = result.data.match(/xmlns:[^=]+="[^"]+"/g);
+		if (matches) {
+			matches.forEach(function (match) {
+				var split = match.split("=");
+				namespaces[split[0]] = split[1].slice(1, -1);
+			});
+		}
 		var data = {
 			source: result.data.replace(/^<svg[^>]+>|<\/svg>$/g, ""),
+			namespaces: namespaces,
 			width: parseFloat(result.info.width),
 			height: parseFloat(result.info.height)
 		}
@@ -35,8 +44,16 @@ function transform (data, x, y, fill) {
 	return data;
 }
 
-function wrap (width, height, shapes) {
-	return '<svg baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" viewBox="0 0 ' + width + ' ' + height + '" width="' + width + '" height="' + height + '">' + shapes.join("") + '</svg>';
+function wrap (width, height, shapes, attributes) {
+	var attrs = [];
+	var name, value;
+	for (name in attributes) {
+		var value = attributes[name];
+		if (value) {
+			attrs.push(" " + name + "=\"" + value + "\"");
+		}
+	}
+	return '<svg' + attrs.join("") + ' viewBox="0 0 ' + width + ' ' + height + '" width="' + width + '" height="' + height + '">' + shapes.join("") + '</svg>';
 }
 
 module.exports.parse = parse;
