@@ -19,8 +19,10 @@
   padding: em(15px);
   width: 100%;
 
-  // Transitions
-  transition: all 0.2s ease-in 0s;
+  // Transition
+  @include transition-property(akk);
+  @include transition-duration(.3s);
+  @include transition-timing-function(ease-in);
 
   &:focus {
   }

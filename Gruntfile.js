@@ -179,7 +179,7 @@ module.exports = function(grunt) {
     // Image compression
     grunt.loadNpmTasks('grunt-imageoptim');
 
-    // 3. Grunt tasks
+    // 2. Grunt tasks
     grunt.registerTask('default', [
         'concat', 
         'uglify', 

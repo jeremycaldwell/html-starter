@@ -89,7 +89,10 @@ a {
   background: transparent;
   text-decoration: none;
   
-  // @include transition(all, 0.15s, ease-in-out 0s);
+  // Transition
+  @include transition-property(all);
+  @include transition-duration(.15s);
+  @include transition-timing-function(ease-in-out);
 }
 
 /**
@@ -121,7 +124,7 @@ a:hover {
 
 h1 {
   line-height: 100%;
-  margin: 0 0 em(7px) 0;
+  margin: 0 0 em(10px) 0;
 
   @include font-size(56);
 }

@@ -29,12 +29,6 @@ body {
 }
 
 
-// Inner
-.inner {
-  @extend %wrapper;
-}
-
-
 // Header
 #header {
   @extend %wrapper;

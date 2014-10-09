@@ -1,28 +1,33 @@
 // Base
 
+
 // Add Compass' IE and vendor prefix support variables.
-// SOURCE: http://compass-style.org/reference/compass/support
+// + http://compass-style.org/reference/compass/support
 @import "compass/support";
+
+// Add Compass' cross-browser mixins for CSS properties
+// + http://compass-style.org/reference/compass/css3/
+@import "compass/css3";
 
 // Breakpoint
 // Really Simple Media Queries with Sass
-// SOURCE: https://github.com/at-import/breakpoint/
+// + https://github.com/at-import/breakpoint/
 @import "breakpoint";
 
 // Singularity
 // Grids Without Limits
-// SOURCE: https://github.com/at-import/Singularity
+// + https://github.com/at-import/Singularity
 @import "singularitygs";
 
 // Toolkit 
 // Progressive Enhancement? Simple. Responsive Web Design? Done. Design in Browser? Beautiful.
-// SOURCE: https://github.com/at-import/toolkit
+// + https://github.com/at-import/toolkit
 @import "toolkit";
 @import "toolkit/kickstart";
 
 // rgbapng
 // Cross-browser compatible RGBA support
-// SOURCE: https://github.com/aaronrussell/compass-rgbapng
+// + https://github.com/aaronrussell/compass-rgbapng
 @import "rgbapng";
 
 

@@ -5,24 +5,21 @@
 
 // Element-invisible as defined by http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
 @mixin element-invisible {
-  position: absolute !important;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  // @if $legacy-support-for-ie6 or $legacy-support-for-ie7 {
-  //   clip: rect(1px 1px 1px 1px); // IE6 and IE7 use the wrong syntax.
-  // }
   clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute !important;
+  width: 1px;
 }
 
 
 // Turns off the element-invisible effect.
 @mixin element-invisible-off {
-  position: static !important;
   clip: auto;
   height: auto;
-  width: auto;
   overflow: auto;
+  position: static !important;
+  width: auto;
 }
 
 
@@ -40,7 +37,7 @@
 // SVG background
 $image-path: '../images' !default;
 $fallback-extension: 'png' !default;
-$retina-suffix: '@2x';
+// $retina-suffix: '@2x';
 
 @mixin svg-bg($name, $dir) {
   background-image: url(#{$image-path}/#{$dir}/svg/#{$name}.svg);
@@ -50,6 +47,15 @@ $retina-suffix: '@2x';
   .no-svg & {
     background-image: url(#{$image-path}/#{$dir}/#{$name}.#{$fallback-extension});
   }
+
+  // Retina image
+  // @if $retina == "retina" {
+  //   @include breakpoint($bp-hidpi) {
+  //     .no-svg & {
+  //       background-image: url(#{$image-path}/#{$dir}/2x/#{$name}#{$retina-suffix}.#{$fallback-extension});
+  //     }
+  //   }
+  // }
 }
 
 

@@ -1,6 +1,6 @@
 //
 // Breakpoint
-//
+// + https://github.com/at-import/breakpoint/wiki
 
 
 $breakpoint-to-ems: 			true;
@@ -32,6 +32,7 @@ $bp-xxxlarge: 						1875px;
 // Fence
 $fence-small_xsmall: 			$bp-small 419px;
 $fence-small_medium: 			$bp-small 879px;
+
 $fence-xxsmall_large:  		$bp-xxsmall 999px;
 $fence-xxsmall_xlarge:  	$bp-xxsmall 1249px;
 $fence-xxsmall_xxlarge:  	$bp-xxsmall 1549px;
@@ -43,4 +44,5 @@ $fence-medium_xxlarge: 		$bp-medium 1549px;
 
 $fence-large_xlarge: 			$bp-large 1249px;
 $fence-large_xxlarge: 		$bp-large 1549px;
+
 $fence-xlarge_xxlarge: 		$bp-xlarge 1549px;

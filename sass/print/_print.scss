@@ -62,9 +62,7 @@
   .forum-topic-navigation,
   .pager,
   .feed-icons,
-  .region-postscript-bottom,
   #header,
-  #header-top,
   .section-divider,
   .sidebars {
     display: none;
@@ -75,8 +73,7 @@
   	overflow: hidden;
   }
 
-  h1#page-title,
-  caption {
+  h1#page-title {
     color: #000;
   }
 }

@@ -16,12 +16,6 @@ a.button:visited,
 }
 
 
-// Submit
-.form-submit {
-	margin-right: em(10px);
-}
-
-
 // Button - Primary
 .button-primary {
 	@extend %button;

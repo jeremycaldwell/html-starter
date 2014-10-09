@@ -1,14 +1,16 @@
 //
 // Grid
-//
+// + https://github.com/at-import/Singularity/wiki/Creating-Grids
 
 
-// Defaults
-$grids: 4;
-$gutters: 1/4;
+// Grid
+@include add-grid(4);
+@include add-grid(6 at $bp-small);
+@include add-grid(8 at $bp-medium);
+@include add-grid(12 at $bp-large);
 
 
-// Responsive
-$grids: add-grid(6 at $bp-small);
-$grids: add-grid(8 at $bp-medium);
-$grids: add-grid(12 at $bp-large);
+// Gutter
+@include add-gutter(1/4);
+
+// @include add-gutter(.25 at $bp-medium);
