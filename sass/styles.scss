@@ -45,9 +45,9 @@
 // Fonts
 @import "base/_fonts.scss";
 
-// Extends / Mixins
-@import "base/_extends.scss";
+// Mixins / Extends
 @import "base/_mixins.scss";
+@import "base/_extends.scss";
 
 // Normalize
 @import "base/_normalize.scss";
