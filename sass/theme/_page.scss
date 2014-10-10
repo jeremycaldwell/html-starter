@@ -3,24 +3,19 @@
 //
 
 
-// HTML + Body
-html, 
-body {
-  margin: 0;
-  padding: 0;
-}
-
-
 // HTML
 html {
-	background: $white;
-  color: $black;
-  font-family: $font-body;
 }
 
 
 // Body
 body {
+  @include font-size($base__font-size_integer);
+
+  background: $white;
+  color: $black;
+  font-family: $font-body;
+  line-height: ($base__line-height/$base__font-size);
 }
 
 

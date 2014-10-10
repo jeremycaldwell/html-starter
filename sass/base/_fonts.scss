@@ -11,8 +11,9 @@
 // use in the normalize.scss file.
 // @see http://compass-style.org/reference/compass/typography/vertical_rhythm/
 
-$base-font-size:   16px; // The font size set on the root html element.
-$base-line-height: 24px; // This line-height determines the basic unit of vertical rhythm.
+$base__font-size_integer: 	16;
+$base__font-size: 					16px;
+$base__line-height: 				24px; // This line-height determines the basic unit of vertical rhythm.
 
 // Letter spacing
 // 1 =1/1000 em

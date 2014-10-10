@@ -18,7 +18,7 @@
     a[href]:after { /* Add visible URL after links. */
       content: " (" attr(href) ")";
       font-weight: normal;
-      font-size: $base-font-size;
+      font-size: $base__font-size;
     }
 
     a[href^="javascript:"]:after,
