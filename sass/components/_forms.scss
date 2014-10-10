@@ -20,7 +20,7 @@
   width: 100%;
 
   // Transition
-  @include transition-property(akk);
+  @include transition-property(all);
   @include transition-duration(.3s);
   @include transition-timing-function(ease-in);
 
