@@ -12,5 +12,8 @@
     "grunt-svgmin": "~0.4.0",
     "grunt-dr-svg-sprites": "~0.9.4",
     "grunt-spritesmith": "~2.20.0"
+  },
+  "scripts": {
+    "postinstall": "find node_modules/ -name \"*.info\" -type f -delete"
   }
 }

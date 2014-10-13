@@ -12,6 +12,7 @@
 // Form text
 .form-text,
 .form-textarea {
+  
   // Transition
   @include transition-property(all);
   @include transition-duration(.3s);
