@@ -44,11 +44,12 @@
 
 // Vertical align
 %vertical-align {
+  
+  // Transform
+  @include transform(translateY(-50%));
+
   position: relative;
   top: 50%;
-
-  // Transform
-  @include transform(translateY(-50%))
 }
 
 
@@ -62,6 +63,14 @@
 
 // Buttons
 %button {
+  @include border-radius(5px);
+  @include box-shadow(0 -3px 0 rgba($black, .25) inset);
+
+  // Transition
+  @include transition-property(background);
+  @include transition-duration(.3s);
+  @include transition-timing-function(ease-in-out);
+
   color: $white;
   display: inline-block;
   font-weight: 700;
@@ -70,14 +79,6 @@
   padding: em(10px) em(20px);
   text-decoration: none;
   white-space: nowrap;
-
-  @include border-radius(5px);
-  @include box-shadow(0 -3px 0 rgba($black, .25) inset);
-
-  // Transition
-  @include transition-property(background);
-  @include transition-duration(.3s);
-  @include transition-timing-function(ease-in-out);
 
   &:hover,
   &:focus,
@@ -120,7 +121,7 @@
 
 // Horizontal rule
 %horizontalrule {
-  border-bottom: 1px solid #ccc;
-
   @include box-shadow(0px 1px 0px 0px rgba($white, .75));
+
+  border-bottom: 1px solid #ccc;
 }

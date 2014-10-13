@@ -83,14 +83,16 @@ html {
  * Remove the gray background color from active links in IE 10.
  */
 
-a {
-  background: transparent;
-  text-decoration: none;
-  
+a,
+a:visited {
+
   // Transition
   @include transition-property(all);
   @include transition-duration(.15s);
   @include transition-timing-function(ease-in-out);
+
+  background: transparent;
+  text-decoration: none;
 }
 
 /**

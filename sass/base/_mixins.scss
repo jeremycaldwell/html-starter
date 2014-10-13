@@ -62,5 +62,5 @@ $fallback-extension: 'png' !default;
 // Font size - Rem and PX fallback
 @mixin font-size($org) {
   font-size: $org + px;
-  font-size: ($org/16) + rem;
+  font-size: ($org/$base__font-size_integer) + rem;
 }

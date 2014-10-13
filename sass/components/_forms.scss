@@ -12,17 +12,17 @@
 // Form text
 .form-text,
 .form-textarea {
+  // Transition
+  @include transition-property(all);
+  @include transition-duration(.3s);
+  @include transition-timing-function(ease-in);
+
   background: $gray-247;
   border: none;
   max-width: 100%;
   outline: none;
   padding: em(15px);
   width: 100%;
-
-  // Transition
-  @include transition-property(all);
-  @include transition-duration(.3s);
-  @include transition-timing-function(ease-in);
 
   &:focus {
   }
