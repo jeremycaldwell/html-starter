@@ -1,0 +1,38 @@
+# Grunt
+http://gruntjs.com/
+
+In one word: automation.
+
+The less work you have to do when performing repetitive tasks like minification, compilation, unit testing, linting, etc, the easier your job becomes. After you've configured it through a Gruntfile, a task runner can do most of that mundane work for you—and your team—with basically zero effort.
+
+## Install
+npm install -g grunt-cli
+
+## Plugins
+http://gruntjs.com/plugins
+
+Was hoping to play with BrowserSync today but didn't have time.
+https://github.com/shakyShane/grunt-browser-sync
+http://www.browsersync.io/docs/grunt/
+
+=================
+
+# Gulp
+http://gulpjs.com/
+
+gulp's use of streams and code-over-configuration makes for a simpler and more intuitive build.
+
+## Install
+$ npm install --global gulp
+
+=================
+
+# Broccoli
+https://github.com/broccolijs/broccoli
+
+A fast, reliable asset pipeline, supporting constant-time rebuilds and compact build definitions. Comparable to the Rails asset pipeline in scope, though it runs on Node and is backend-agnostic.
+
+## Install
+npm install --save-dev broccoli
+npm install --global broccoli-cli
+
